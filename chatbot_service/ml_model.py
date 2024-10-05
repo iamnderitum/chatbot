@@ -1,8 +1,8 @@
 import tensorflow as tf
 import nltk
+from keras.layers import TFSMLayer
 
-
-model = tf.keras.models.load_model("models/saved_model")
+model = TFSMLayer("models/saved_model", call_endpoint="serving_default")
 
 class ChatbotModel:
     def __init__(self) -> None:
